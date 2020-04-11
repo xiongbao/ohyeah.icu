@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'OhYeah';
+  src: url('../fonts/OhYeah.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MFShangYa';
+  src: url('../fonts/MFShangYa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html,body {
+  margin: 0;height: 100%;
+}
+html {
+  font-size: 26.6666vw;
+}
+@media (min-width: 640px) {
+  html {font-size: 85px;}
+}
+@media (min-width: 750px) {
+  html {font-size: 100px;}
+}
+@media (min-width: 960px) {
+  html {font-size: 128px;}
+}
+body {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+  font-family: -apple-system, system-ui, 'Helvetica Neue', 'Helvetica', 'Tahoma', 'Arial', 'PingFang SC', 'Microsoft Yahei';
+  font-size: 16px;
+  color: #03081A;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+body.weixin {background-color: #ededed;}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-shrink: 1;
+  padding: .2rem 0;
+}
+header i {
+  content: '';
+  display: block;
+  flex: 1;
+  max-height: 3.18rem;
+  width: 100%;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto 100%;
+}
+hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  margin: 0;
+  font-size: .3rem;
+  font-weight: normal;
+  order: 1;
+  letter-spacing: .18em;
+  text-indent: .36em;
+  font-family: "MFShangYa";
+}
+h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  margin: .08rem 0 -0.05rem;
+  font-family: 'OhYeah';
+  font-weight: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+h3 span {
+  font-size: .248rem;
+}
+h3 strong {
+  font-size: .8rem;
+  font-weight: inherit;
+  color: #ca3939;
+}
+h3 strong s {
+  text-decoration: none;
+  width: .12rem;
+  overflow: hidden;
+  display: inline-block;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 24vh;
+  /*margin: .2rem 0 0;*/
+  font-family: inherit;
+  background-color: #595f69;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+article h2 {
+  color: #fff;
+  font-family: "MFShangYa";
+  font-weight: normal;
+  font-size: .46rem;
+  line-height: 1.25;
+  margin: 0;
+}
+article p {
+  font-size: .14rem;
+  margin: 0;
+  color: rgba(255,255,255,.6);
+  font-weight: 300;
+  text-align: center;
+}
+footer {
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;right: 0;
+  bottom: 0;
+  bottom: constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom);
+  font-size: .10rem;
+  color: rgba(255,255,255,.3);
+  text-align: center;
+  line-height: .28rem;
+  letter-spacing: .02rem;
+}
+@media(orientation:landscape) and (max-height: 640px) {
+  header {flex-direction: row;}
+  header i {
+    width: 40vh;
+    height: 40vh;
+    max-height: none;
+    flex: none;
+    margin-right: .1rem;
+  }
+  hgroup {align-items: normal;justify-content:flex-end;height: 40vh;}
+  h1 {order: 0;text-indent: .24em;font-size: 7.5vh;}
+  h3 {align-items: normal;margin: 0;}
+  h3 span {
+    font-size: 7vh;
+    text-indent: .3em;
+    letter-spacing: .1em;
+  }
+  h3 strong {font-size: 20vh;margin-bottom: -1.8vh}
+  article {height: 40vh;}
+  article h2 {font-size: 12vh;}
+  article p {font-size: 3.6vh;}
+}
